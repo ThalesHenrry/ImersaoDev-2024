@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Animes</title>
+</head>
+
+<body>
+
+    <img src="img/awards.png.png" alt="logo anime awards" class="header-image">
+
+    <header class="header-container">
+        <h1>Melhores Animes 2024</h1>
+    </header>
+
+    <main>
+        <section>
+            <input type="text" placeholde="Digite o anime" id="campo-pesquisa">
+            <button onclick="pesquisar()">Pesquisar</button>
+        </section>
+
+        <section 
+        class="resultados-pesquisa" id="resultados-pesquisa">
+        </section>
+    </main>
+
+    <div class="video-container">
+        <video src="img/meme.webm" autoplay loop muted></video>
+    </div>
+
+    <style>
+        .video-container {
+            position: absolute;
+            top: 55%;
+            right: 90px;
+            transform: translateY(-50%);
+            width: 200px;
+            height: 190px;
+            z-index: 1;
+        }
+    </style>
+
+    <script src="dados.js"></script>
+    <script src="app.js"></script>
+
+    <footer>
+        <p>2024 - Animes Brasil - DIREITOS AUTORAIS LTDA</p>
+        <p>ThalesGreg@gmail.com</p>
+    </footer>
+
+</body>
+
+</html>
