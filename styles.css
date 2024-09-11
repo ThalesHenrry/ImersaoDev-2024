@@ -1,142 +1,135 @@
 /* Importa a fonte Chakra Petch do Google Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,300;0,400;0,500;0,600;0,700&display=swap');
 
 /* Estiliza o corpo da página */
 body {
-    font-family: "Chakra Petch", sans-serif; /* Define a fonte padrão */
-    background-color: #DDDDDD; /* Cor de fundo da página */
-    display: flex; /* Usa Flexbox para layout */
-    flex-direction: column; /* Alinha os itens na vertical */
-    align-items: center; /* Centraliza os itens horizontalmente */
-    justify-content: center; /* Centraliza os itens verticalmente */
-    height: 100vh; /* Preenche a altura total da viewport */
-    margin: 0; /* Remove a margem padrão */
-    padding: 0; /* Remove o padding padrão */
+    font-family: "Chakra Petch", sans-serif;
+    background-image: url('img/fundo.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     min-height: 100vh;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 main {
     flex: 1;
-    padding-bottom: 60px; /* Espaço para o rodapé */
+    display: flex;
+    flex-direction: column; /* Alinha o conteúdo na vertical */
+    align-items: center; /* Centraliza horizontalmente */
+    justify-content: center; /* Centraliza verticalmente */
+    padding: 0 1rem; /* Espaçamento nas laterais */
+    box-sizing: border-box;
 }
 
-
 .header-image {
-    /* ... outros estilos ... */
-    max-width: 350px; /* Ajuste o valor para o tamanho desejado */
-    height: auto; /* Mantém a proporção da imagem */
-    margin-bottom: -50px;
-  }
+    max-width: 40%; /* Garante que a imagem ocupe toda a largura */
+    height: auto;
+    display: block; /* Garante que a imagem seja exibida */
+    margin-bottom: -150px;
+}
 
 /* Estiliza os títulos h1 */
 h1 {
-    font-size: 2.5rem; /* Tamanho da fonte */
-    color: #222831; /* Cor do texto */
-    text-align: center; /* Alinha o texto ao centro */
-    letter-spacing: 0.4rem; /* Espaçamento entre letras */
+    font-size: 2.5rem;
+    color: #ff8800;
+    text-align: center;
+    letter-spacing: 0.4rem;
+    text-shadow: 1px 1px 0 #333333, /* Sombras horizontais e verticais com cinza escuro */
+    -1px -1px 0 #333333, 
+    1px -1px 0 #333333, 
+    -1px 1px 0 #333333;
 }
 
 /* Estiliza as seções da página */
 section {
-    display: flex; /* Usa Flexbox para layout */
-    flex-direction: column; /* Alinha os itens na vertical */
-    align-items: center; /* Centraliza os itens horizontalmente */
-    margin-bottom: 3rem; /* Espaçamento abaixo de cada seção */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 3rem;
+    width: 100%;
 }
 
 /* Estiliza os inputs dentro das seções */
 section input {
-    width: 30rem; /* Largura dos inputs */
-    border: none; /* Remove a borda padrão */
-    padding: 1rem; /* Espaçamento interno */
-    border-radius: 1.5rem; /* Borda arredondada */
-    margin-bottom: 1rem; /* Espaçamento abaixo dos inputs */
-    color: #45474B; /* Cor do texto */
-    font-size: 1rem; /* Tamanho da fonte */
-    box-sizing: border-box; /* Inclui padding e border na largura total */
+    width: 30rem;
+    max-width: 100%;
+    border: none;
+    padding: 1rem;
+    border-radius: 1.5rem;
+    margin-bottom: 1rem;
+    color: #45474B;
+    font-size: 1rem;
+    box-sizing: border-box;
 }
 
 /* Estiliza os botões dentro das seções */
 section button {
-    padding: 0.8rem 1.2rem; /* Espaçamento interno do botão */
-    border: none; /* Remove a borda padrão */
-    border-radius: 1.5rem; /* Borda arredondada */
-    background-color: #30475E; /* Cor de fundo do botão */
-    color: #F5F7F8; /* Cor do texto do botão */
-    font-size: 1rem; /* Tamanho da fonte */
-    cursor: pointer; /* Muda o cursor para indicar que é clicável */
+    padding: 0.8rem 1.2rem;
+    border: none;
+    border-radius: 1.5rem;
+    background-color: #333;
+    color: #F5F7F8;
+    font-size: 1rem;
+    cursor: pointer;
 }
 
-/* Adiciona efeito hover ao botão de pesquisa */
 section button:hover {
-    background-color: #30475E; /* Muda a cor de fundo ao passar o mouse */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adiciona uma sombra mais intensa */
+    background-color: #30475E;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-/* Estiliza a caixa de resultados da pesquisa */
+/* Estiliza a caixa de resultados de pesquisa */
 .resultados-pesquisa {
-    width: 60rem; /* Largura máxima da caixa de resultados */
-    height: 46vh; /* Altura máxima da caixa de resultados */
-    overflow-y: auto; /* Adiciona rolagem vertical se necessário */
-    margin-top: 1rem; /* Espaçamento acima da caixa de resultados */
-    padding: 1rem; /* Espaçamento interno */
-    border-radius: 0.6rem; /* Borda arredondada */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start; /* Alinha os itens no topo do container */
+    width: 60rem;
+    max-width: 100%;
+    max-height: 300px; /* Defina uma altura máxima confortável */
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    padding: 1rem;
+    border-radius: 0.6rem;
+    box-sizing: border-box;
+    overflow-y: auto; /* Mostra a barra de rolagem quando necessário */
 }
 
-/* Estiliza cada item de resultado */
+/* Certifique-se de que os itens de resultado tenham margens internas para não serem cortados */
 .item-resultado {
+    width: 100%;
+    max-width: 800px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     background: linear-gradient(to bottom, #fff, #f0f0f0);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2), inset 0px 2px 4px rgba(0, 0, 0, 0.1);
     filter: drop-shadow(0px 2px 2px rgba(0, 0, 0, 0.1));
     border-radius: 0.6rem;
     padding: 1rem;
     margin-bottom: 1rem;
+    box-sizing: border-box;
 }
 
-/* Estiliza os títulos dentro dos itens de resultado */
-.item-resultado h2 {
-    font-size: 1.5rem; /* Tamanho da fonte */
-    color: #222831; /* Cor do texto */
-}
-
-/* Estiliza os links dentro dos itens de resultado */
-.item-resultado a {
-    text-decoration: none; /* Remove o sublinhado padrão dos links */
-    color: #30475E; /* Cor do texto dos links */
-}
-
-/* Estiliza os links quando são passados o mouse sobre */
-.item-resultado a:hover {
-    text-decoration: underline; /* Adiciona sublinhado ao passar o mouse */
-}
-
-/* Estiliza a descrição meta dentro dos itens de resultado */
-.descricao-meta {
-    color: #45474B; /* Cor do texto */
-    margin: 0.5rem 0; /* Margem acima e abaixo */
-}
-
-/*Estilizar a imagem dentro do campo */
-.item-resultado {
-    display: flex;
-    align-items: center;
-    margin-bottom: 20px;
-    /* Outros estilos comuns a todos os animes */
-}
 
 .imagem-anime {
     width: 200px;
     height: 200px;
-    object-fit: cover;
+    object-fit: contain; /* Garante que a imagem não seja cortada */
     margin-right: 20px;
-    /* Estilos para todas as imagens */
 }
 
 .texto-anime {
     flex: 1;
     display: flex;
     flex-direction: column;
-    /* Estilos para todo o texto */
 }
 
 .texto-anime h2 {
@@ -149,91 +142,99 @@ section button:hover {
 
 /* Estiliza o rodapé da página */
 footer {
-    background-color: #F5F7F8; /* Cor de fundo do rodapé */
-    color: #45474B; /* Cor do texto */
-    text-align: center; /* Alinha o texto ao centro */
-    padding: 0; /* Espaçamento interno */
-    width: 100%; /* Largura total da página */
-    position: absolute; /* Posiciona o rodapé */
-    bottom: 0; /* Alinha ao fundo da página */
-    font-size: 1rem; /* Tamanho da fonte */
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 12px 0;
+    width: 100%;
+    position: relative;
+    height: 60px;
+    z-index: 1;
+    margin-top: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 
+/* Centraliza o conteúdo no rodapé */
+footer div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+footer p {
+    margin-bottom: 5px; /* Ajuste para mais ou menos espaço */
+    margin-top: 5px;
+}
+
+/* Video container */
+.video-container {
+    position: relative; /* Garante que o vídeo fique fixo, mesmo ao rolar a página */
+    bottom: -80px; /* Coloca o vídeo logo acima do rodapé */
+    right: -700px;
+    width: 300px;
+    height: 190px;
+    z-index: 1000;
+}
+
+.video-container video {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+/* Responsividade */
 @media (max-width: 768px) {
     h1 {
-        font-size: 2rem; /* Tamanho da fonte em telas menores */
-        letter-spacing: 0.2rem; /* Espaçamento entre letras em telas menores */
+        font-size: 2rem;
+        letter-spacing: 0.2rem;
     }
 
     section input {
-        width: 25rem; /* Largura dos inputs em telas menores */
-        padding: 0.8rem; /* Espaçamento interno em telas menores */
+        width: 25rem;
+        padding: 0.8rem;
     }
 
     .resultados-pesquisa {
-        width: 40rem; /* Largura da caixa de resultados em telas menores */
-        height: 40vh; /* Altura da caixa de resultados em telas menores */
+        width: 40rem;
+        height: 40vh;
     }
 
     .item-resultado h2 {
-        font-size: 1.3rem; /* Tamanho da fonte dos títulos em telas menores */
+        font-size: 1.3rem;
     }
 }
 
 /* Responsividade para celulares */
 @media (max-width: 480px) {
-
     h1 {
-        font-size: 1.8rem; /* Tamanho da fonte em telas pequenas */
-        letter-spacing: 0.1rem; /* Espaçamento entre letras em telas pequenas */
+        font-size: 1.8rem;
+        letter-spacing: 0.1rem;
     }
 
     section input {
-        width: 17rem; /* Largura total dos inputs em telas pequenas */
+        width: 17rem;
     }
 
     section button {
-        padding: 0.6rem 1rem; /* Espaçamento interno do botão em telas pequenas */
-        font-size: 0.9rem; /* Tamanho da fonte do botão em telas pequenas */
+        padding: 0.6rem 1rem;
+        font-size: 0.9rem;
     }
 
     .resultados-pesquisa {
-        width: 90%; /* Largura da caixa de resultados em telas pequenas */
-        height: 50vh; /* Altura da caixa de resultados em telas pequenas */
+        width: 90%;
+        height: 50vh;
     }
 
     .item-resultado h2 {
-        font-size: 1.1rem; /* Tamanho da fonte dos títulos em telas pequenas */
+        font-size: 1.1rem;
     }
-
-    /*Estilizando o video do footer*/
-    /* ... outros estilos ... */
 
     .video-container {
-        position: fixed; /* Mantém o vídeo no mesmo lugar ao rolar a página */
-        bottom: 10px; /* Alinha o vídeo 10px acima da parte inferior da janela */
-        right: 10px; /* Alinha o vídeo 10px à esquerda da borda direita */
-        width: 250px; /* Largura do vídeo */
-        height: 200px; /* Altura do vídeo */
-        z-index: 9999; /* Certifica-se que o vídeo estará na frente de todos os outros elementos */
+        bottom: 60px; /* Ajusta o vídeo para telas pequenas */
+        right: 10px;
     }
-    
-    .video-container video {
-        width: 100%; /* O vídeo ocupa toda a largura do container */
-        height: 100%; /* O vídeo ocupa toda a altura do container */
-        object-fit: cover; /* Faz o vídeo preencher o container sem distorção */
-    }
-    
-    footer {
-        position: fixed;
-        bottom: 0;
-        width: 100%;
-        height: 60px;
-        background-color: #333;
-        color: white;
-        text-align: center;
-        padding: 10px 0;
-        margin-top: auto;
-    }
-    
 }
