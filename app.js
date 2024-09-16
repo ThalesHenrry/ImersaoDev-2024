@@ -34,7 +34,7 @@ function pesquisar() {
         }
 
         if (!resultado){
-            resultado = "<p>Anime não enontrado</p>"
+            resultado = "<p>Anime não encontrado</p>"
         }
     }
     
